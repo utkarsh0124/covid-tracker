@@ -1,4 +1,4 @@
-# covid-tacker
+# covid-tracker
 Mini Project to show current Covid cases and predictions
 
 1. Scrapping data from (https://www.mohfw.gov.in/) for State-wise Covid related data.
