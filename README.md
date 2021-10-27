@@ -10,7 +10,7 @@ Steps:
 1. Start by running the mysql server. Open cmd and type:
 	mysqld
 	mysql -u root -p
-	enter the password for root.
+	enter the password for root(admin).
 
 2.Run "cv_db_table.sql" to create required database and tables.
 

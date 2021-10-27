@@ -6,6 +6,7 @@ Dependencies :
 	beautifulsoup4
 	chrome webdriver for data scraping
 	python-decouple
+	mysql-connector-python
 	
 Users:
 	MySql:
