@@ -1,0 +1,14 @@
+Dependencies : 
+	python 3.7 or +
+	django
+	selenium
+	pandas
+	beautifulsoup4
+	chrome webdriver for data scraping
+	python-decouple
+	
+Users:
+	MySql:
+	USERNAME: cv_tracker
+	password: cv_tracker
+		
