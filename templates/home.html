@@ -1,23 +1,38 @@
-<!DOCTYPE html>
 <html>
     <head>
-        <meta charset="utf-8">
-        <title></title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="./home.css">
+        <title> Graph Visualisation of Covid-19 </title>
+        <link rel="stylesheet" href="HOME.css">
+        
+        <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+      google.charts.load('current', {'packages':['corechart']});
+      google.charts.setOnLoadCallback(drawChart);
+
+      function drawChart() {
+        var data = google.visualization.arrayToDataTable([
+          ['Year', 'Sales', 'Expenses'],
+          ['2004',  1000,      400],
+          ['2005',  1170,      460],
+          ['2006',  660,       1120],
+          ['2007',  1030,      540]
+        ]);
+
+        var options = {
+          title: 'Company Performance',
+          curveType: 'function',
+          legend: { position: 'bottom' }
+        };
+
+        var chart = new google.visualization.LineChart(document.getElementById('curve_chart'));
+
+        chart.draw(data, options);
+      }
+    </script>
+        
     </head>
     <body>
-        <h1>
-            Home View
-        </h1>
-        <ul>
-            <li>SNo : {{SNo}}</li>
-            <li>State Name : {{StateName}}</li>
-            <li>Active Today : {{ActiveToday}} </li>
-            <li>Total Deaths : {{TotalDeaths}} </li>
-            <li>Total Diacharged : {{ActiveToday}} </li>
-        </ul>
-        <script src="./home.js" async defer></script>
+        
+        <div id="curve_chart" class="chart"></div>
+
     </body>
 </html>
